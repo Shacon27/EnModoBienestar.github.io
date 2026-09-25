@@ -1,0 +1,1019 @@
+
+/* =========================================
+   BIENESTAR EMOCIONAL
+   ESTILOS EXCLUSIVOS DE ESTA PÁGINA
+========================================= */
+
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    min-height: 100vh;
+
+    color: #2f4050;
+
+    overflow-x: hidden;
+
+    background-image: url("../Imagenes/A0.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* =========================================
+   CAPA SUAVE SOBRE EL FONDO
+========================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    z-index: -2;
+}
+
+
+/* =========================================
+   PARTÍCULAS
+========================================= */
+
+.particulas {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.particulas span {
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    background: rgba(255, 255, 255, 0.70);
+
+    border-radius: 50%;
+
+    animation: flotar 12s linear infinite;
+}
+
+
+/* =========================================
+   POSICIÓN DE PARTÍCULAS
+========================================= */
+
+.particulas span:nth-child(1) {
+    left: 5%;
+    animation-duration: 14s;
+}
+
+.particulas span:nth-child(2) {
+    left: 15%;
+    animation-duration: 18s;
+    animation-delay: 2s;
+}
+
+.particulas span:nth-child(3) {
+    left: 25%;
+    animation-duration: 13s;
+    animation-delay: 4s;
+}
+
+.particulas span:nth-child(4) {
+    left: 35%;
+    animation-duration: 17s;
+    animation-delay: 1s;
+}
+
+.particulas span:nth-child(5) {
+    left: 45%;
+    animation-duration: 15s;
+    animation-delay: 5s;
+}
+
+.particulas span:nth-child(6) {
+    left: 55%;
+    animation-duration: 19s;
+    animation-delay: 3s;
+}
+
+.particulas span:nth-child(7) {
+    left: 65%;
+    animation-duration: 14s;
+    animation-delay: 6s;
+}
+
+.particulas span:nth-child(8) {
+    left: 75%;
+    animation-duration: 16s;
+    animation-delay: 2s;
+}
+
+.particulas span:nth-child(9) {
+    left: 85%;
+    animation-duration: 13s;
+    animation-delay: 4s;
+}
+
+.particulas span:nth-child(10) {
+    left: 95%;
+    animation-duration: 18s;
+    animation-delay: 1s;
+}
+
+.particulas span:nth-child(11) {
+    left: 40%;
+    animation-duration: 20s;
+    animation-delay: 7s;
+}
+
+.particulas span:nth-child(12) {
+    left: 70%;
+    animation-duration: 17s;
+    animation-delay: 5s;
+}
+
+
+/* =========================================
+   ANIMACIÓN DE PARTÍCULAS
+========================================= */
+
+@keyframes flotar {
+
+    0% {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.contenido-bienestar {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 35px 20px 60px;
+}
+
+
+/* =========================================
+   BOTÓN VOLVER AL INICIO
+========================================= */
+
+.volver-inicio {
+    display: flex;
+
+    justify-content: flex-start;
+
+    margin-bottom: 30px;
+}
+
+.volver-inicio a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 23px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 3px solid rgba(255, 255, 255, 0.90);
+
+    color: #6C4AB6;
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 7px 0 rgba(108, 74, 182, 0.22),
+        0 10px 25px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.volver-inicio a::before {
+    content: "🏠";
+
+    font-size: 22px;
+
+    transition: transform 0.25s ease;
+}
+
+.volver-inicio a:hover {
+    transform:
+        translateY(-5px)
+        rotate(-1deg);
+
+    background: rgba(255, 255, 255, 1);
+
+    box-shadow:
+        0 10px 0 rgba(108, 74, 182, 0.22),
+        0 15px 30px rgba(0, 0, 0, 0.20);
+}
+
+.volver-inicio a:hover::before {
+    transform:
+        rotate(-8deg)
+        scale(1.15);
+}
+
+.volver-inicio a:active {
+    transform:
+        translateY(3px)
+        scale(0.97);
+
+    box-shadow:
+        0 3px 0 rgba(108, 74, 182, 0.22),
+        0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.titulo-bienestar {
+    width: 100%;
+
+    text-align: center;
+
+    margin: 15px auto 40px;
+}
+
+.titulo-bienestar h1 {
+    font-family: "Fredoka", sans-serif;
+
+    font-size: clamp(35px, 5vw, 65px);
+
+    line-height: 1.12;
+
+    font-weight: 700;
+
+    color: #6C4AB6;
+
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 2px 0 rgba(255, 255, 255, 0.95),
+        0 5px 0 rgba(190, 220, 235, 0.75),
+        0 8px 15px rgba(0, 0, 0, 0.25),
+        0 0 20px rgba(255, 255, 255, 0.35);
+
+    animation:
+        tituloFlotante 4s ease-in-out infinite;
+}
+
+@keyframes tituloFlotante {
+
+    0% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-5px)
+            scale(1.025);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+   IMAGEN PRINCIPAL
+   ESTA SE MANTIENE COMO LA TIENES
+========================================= */
+
+.imagen-principal {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.imagen-principal img {
+    width: 65%;
+
+    max-width: 700px;
+
+    min-width: 0;
+
+    height: auto;
+
+    display: block;
+
+    border-radius: 28px;
+
+    border: 4px solid rgba(255, 255, 255, 0.80);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.20);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+    cursor: zoom-in;
+}
+
+.imagen-principal img:hover {
+    transform:
+        translateY(-5px)
+        scale(1.01);
+
+    box-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   TARJETA DE TEXTO
+========================================= */
+
+.texto-bienestar {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto 45px;
+
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 3px solid rgba(255, 255, 255, 0.75);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.texto-bienestar h2 {
+    font-family: "Fredoka", sans-serif;
+
+    font-size: clamp(28px, 4vw, 42px);
+
+    color: #6C4AB6;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+.texto-bienestar p {
+    font-family: "Nunito", sans-serif;
+
+    font-size: clamp(17px, 2vw, 21px);
+
+    line-height: 1.75;
+
+    color: #334653;
+
+    margin-bottom: 20px;
+}
+
+.texto-bienestar p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   TEXTO DESTACADO
+========================================= */
+
+.texto-destacado {
+    margin-top: 25px;
+
+    padding: 18px 22px;
+
+    border-radius: 20px;
+
+    background: rgba(108, 74, 182, 0.10);
+
+    border-left: 6px solid #6C4AB6;
+
+    color: #5A3D91 !important;
+
+    font-family: "Fredoka", sans-serif !important;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ÚLTIMAS DOS IMÁGENES
+========================================= */
+
+.espacios-imagenes {
+    width: 80%;
+
+    max-width: 900px;
+
+    margin: 20px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.espacio-imagen {
+    min-height: 230px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 15px;
+
+    border-radius: 26px;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 3px dashed rgba(108, 74, 182, 0.35);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.espacio-imagen:hover {
+    transform: translateY(-5px);
+
+    background: rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================
+   TAMAÑO DE LAS ÚLTIMAS DOS IMÁGENES
+========================================= */
+
+.espacio-imagen img {
+    width: 100%;
+
+    max-width: 390px;
+
+    max-height: 280px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+
+    cursor: zoom-in;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.espacio-imagen img:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================
+   BOTÓN FINAL
+========================================= */
+
+.volver-final {
+    justify-content: center;
+
+    margin-top: 55px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px 20px 40px;
+
+    color: white;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    text-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   VISOR DE IMÁGENES
+========================================= */
+
+.visor-imagen {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 40px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(25, 20, 40, 0.88);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.visor-imagen.activo {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+.visor-imagen img {
+    max-width: 92vw;
+
+    max-height: 88vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45);
+
+    transform: scale(0.85);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.visor-imagen.activo img {
+    transform: scale(1);
+}
+
+
+/* =========================================
+   BOTÓN CERRAR
+========================================= */
+
+.cerrar-visor {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: #6C4AB6;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.cerrar-visor:hover {
+    transform: scale(1.1) rotate(5deg);
+
+    background: white;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .contenido-bienestar {
+        width: 94%;
+
+        padding:
+            30px 15px 50px;
+    }
+
+
+    /* PRIMERA IMAGEN */
+    .imagen-principal img {
+        width: 70%;
+
+        max-width: 600px;
+    }
+
+
+    .texto-bienestar {
+        padding: 32px;
+    }
+
+
+    /* ÚLTIMAS DOS */
+    .espacios-imagenes {
+        width: 85%;
+
+        gap: 20px;
+    }
+
+
+    .espacio-imagen img {
+        max-width: 330px;
+
+        max-height: 240px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .contenido-bienestar {
+        width: 94%;
+
+        padding:
+            22px 10px 40px;
+    }
+
+
+    .volver-inicio {
+        margin-bottom: 22px;
+    }
+
+
+    .volver-inicio a {
+        padding:
+            11px 19px;
+
+        font-size: 16px;
+    }
+
+
+    .volver-inicio a::before {
+        font-size: 20px;
+    }
+
+
+    .titulo-bienestar {
+        margin:
+            10px auto 28px;
+    }
+
+
+    .titulo-bienestar h1 {
+        font-size:
+            clamp(30px, 9vw, 42px);
+
+        line-height: 1.15;
+    }
+
+
+    /* PRIMERA IMAGEN */
+    .imagen-principal {
+        margin-bottom: 25px;
+    }
+
+
+    .imagen-principal img {
+        width: 82%;
+
+        max-width: 360px;
+
+        border-radius: 22px;
+
+        border-width: 3px;
+    }
+
+
+    /* TEXTO */
+    .texto-bienestar {
+        padding:
+            25px 20px;
+
+        border-radius: 24px;
+    }
+
+
+    .texto-bienestar h2 {
+        font-size: 30px;
+    }
+
+
+    .texto-bienestar p {
+        font-size: 17px;
+
+        line-height: 1.65;
+    }
+
+
+    .texto-destacado {
+        padding:
+            15px 17px;
+    }
+
+
+    /* ÚLTIMAS DOS IMÁGENES */
+    .espacios-imagenes {
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .espacio-imagen {
+        min-height: 210px;
+
+        padding: 12px;
+
+        border-radius: 22px;
+    }
+
+
+    .espacio-imagen img {
+        width: 100%;
+
+        max-width: 340px;
+
+        max-height: 250px;
+    }
+
+
+    .volver-final {
+        margin-top: 35px;
+    }
+
+
+    footer {
+        padding:
+            25px 15px 30px;
+    }
+
+
+    /* VISOR EN CELULAR */
+    .visor-imagen {
+        padding: 20px;
+    }
+
+
+    .visor-imagen img {
+        max-width: 94vw;
+
+        max-height: 82vh;
+
+        border-radius: 14px;
+    }
+
+
+    .cerrar-visor {
+        top: 12px;
+        right: 12px;
+
+        width: 48px;
+        height: 48px;
+
+        font-size: 32px;
+    }
+}
+
+
+/* =========================================
+   CELULARES MUY PEQUEÑOS
+========================================= */
+
+@media (max-width: 380px) {
+
+    /* PRIMERA IMAGEN */
+    .imagen-principal img {
+        width: 88%;
+
+        max-width: 300px;
+    }
+
+
+    /* ÚLTIMAS DOS */
+    .espacios-imagenes {
+        width: 94%;
+    }
+
+
+    .espacio-imagen {
+        min-height: 180px;
+    }
+
+
+    .espacio-imagen img {
+        max-width: 290px;
+
+        max-height: 220px;
+    }
+}
+
+
+/* =========================================
+   PANTALLAS GRANDES / TV
+========================================= */
+
+@media (min-width: 1600px) {
+
+    .contenido-bienestar {
+        max-width: 1500px;
+    }
+
+
+    .titulo-bienestar h1 {
+        font-size:
+            clamp(55px, 4vw, 75px);
+    }
+
+
+    /* PRIMERA IMAGEN
+       SE MANTIENE CONTROLADA */
+    .imagen-principal img {
+        width: 55%;
+
+        max-width: 800px;
+    }
+
+
+    .texto-bienestar {
+        max-width: 1150px;
+
+        padding: 50px;
+    }
+
+
+    .texto-bienestar p {
+        font-size: 23px;
+    }
+
+
+    /* ÚLTIMAS DOS IMÁGENES */
+    .espacios-imagenes {
+        width: 75%;
+
+        max-width: 1000px;
+    }
+
+
+    .espacio-imagen {
+        min-height: 280px;
+    }
+
+
+    .espacio-imagen img {
+        max-width: 430px;
+
+        max-height: 300px;
+    }
+}
+
